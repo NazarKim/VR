@@ -1,0 +1,160 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    margin-right: 20px;
+}
+.fixedm {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.fixed-menu-icon span {
+    transition: transform 0.3s ease;
+}
+.menu input{
+    display: none;
+}
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
+.menu-items li {
+    margin-bottom: 50px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#menu-toggle:checked ~ .menu-items {
+    opacity: 1;
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+*{
+    font-family: Roboto, sans-serif;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+}
+.card img {
+    width: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+#q{
+    width: 255px;
+}
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+}
+
+.button, .button__icon, .button__text {
+    transition: all 0.3s;
+}
+
+.button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .svg {
+    width: 30px;
+    stroke: #fff;
+}
+
+.button:hover {
+    background: #34974d;
+}
+
+.button:hover .button__text {
+    color: transparent;
+}
+
+.button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+}
+
+.button:active .button__icon {
+    background-color: #2e8644;
+}
+
+.button:active {
+    border: 1px solid #2e8644;
+}

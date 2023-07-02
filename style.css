@@ -1,0 +1,654 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-image: url("https://www2.deloitte.com/content/dam/Deloitte/at/Images/inline_images/human-capital/at-technology-grafik.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+.fixed-menu-icon span {
+    transition: transform 0.3s ease;
+}
+.menu input{
+    display: none;
+}
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: none;
+}
+
+.menu-items li {
+    margin-bottom: 50px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#menu-toggle:checked ~ .menu-items {
+    opacity: 1;
+    display: block;
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+*{
+    font-family: Roboto, sans-serif;
+}
+header h1{
+    font-weight: 900;
+    font-size: 80px;
+    margin: 0;
+}
+header section{
+    margin-left: 70%;
+    padding-top: 180px;
+}
+.infOne img{
+    width: 500px;
+}
+.infOne{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.infOne aside{
+    width: 500px;
+    position: relative;
+    z-index: 1;
+    bottom: 30px;
+    right: 30px;
+}
+.infTwo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 100px;
+    align-items: center;
+}
+.imgPeople {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-right: 100px;
+}
+.imgPeople img {
+    width: 350px;
+}
+#one {
+    grid-row: 2;
+    grid-column: 2;
+}
+#two {
+    grid-row: 1;
+    grid-column: 2;
+}
+#man {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+.infTwo aside{
+    width: 600px;
+    z-index: 1;
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+}
+.lines{
+    position: absolute;
+    width: 300px;
+}
+.infTwo aside h2{
+    font-size: 50px;
+}
+.loginReg{
+    margin-top: 2%;
+}
+.btn {
+    font-size: 20px;
+    border: none;
+    padding: 1em 1.5em;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #8039d9;
+    transition: .5s ease;
+}
+#reg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color:  #00ffc4;
+    transition: .5s ease;
+}
+.btn:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+}
+#reg:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+}
+#reg:hover::before {
+    width: 100%;
+}
+.btn:hover::before {
+    width: 100%;
+}
+#reg{
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
+}
+aside{
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 20px;
+}
+.innerDiv{
+    z-index: 2;
+    position: relative;
+    background-color: #8039d9;
+    border-radius: 15px;
+    margin-left: 100px;
+}
+.innerDivs{
+    background-color: #00ffc4;
+    margin-left: 200px;
+    z-index: 2;
+    border-radius: 15px;
+    margin-right: 100px;
+}
+.infTree{
+    background-color: #8039d9;
+    width: 100%;
+    height: 500px;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;;
+}
+article img{
+    width: 150px;
+    padding-left: 25px;
+    background-color: #00ffc4;
+}
+.cardText{
+    width: 200px;
+    text-align: center;
+}
+article{
+    padding: 35px;
+    background-color: #ffffff;
+    border: 10px solid #00ffc4;
+    border-radius: 20px;
+}
+#vrGame{
+    width: 175px;
+}
+.infFour{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+.infFour section{
+    margin-left: 10%;
+}
+.cardGif{
+    width: 600px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    left: 30px;
+    top: 30px;
+    border-bottom: 75px solid #00ffc4;
+}
+.cardGif h2 span{
+    font-size: 40px;
+    font-weight: 1000;
+}
+.cardGif h2{
+    font-size: 30px;
+}
+.infFour section{
+    background-color: #8039d9;
+    border-radius: 20px;
+    width: 700px;
+    position: relative;
+}
+.typing-text {
+    position: relative; /* Позволяет позиционировать псевдоэлемент */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 3s steps(40);
+    animation-fill-mode: forwards;
+}
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.infFive{
+    margin-top: 100px;
+    background-image: url("https://www.rd.com/wp-content/uploads/2022/08/GettyImages-1405467489.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+.infFive h1{
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    font-size: 50px;
+    font-weight: 1000;
+}
+.titleProd{
+    width: 600px;
+    margin-left: 33%;
+}
+.btnn{
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 800;
+    color: black;
+    background-color: white;
+    margin-left: 43%;
+    margin-top: 100px;
+}
+.btnn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btnn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btnn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+.btnn::after {
+    background-color: #fff;
+}
+.btnn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    background-color: #f7f7f7;
+}
+footer img{
+    width: 50px;
+}
+h4{
+    text-align: center;
+}
+@media screen and (max-width: 1500px) {
+    header section{
+        margin-left: 65%;
+    }
+    .innerDivs{
+        margin-left: 0;
+        margin-right: 50px;
+    }
+    .infFour section{
+        margin-left: 2%;
+        width: 50%;
+    }
+    .infFour img{
+        width: 500px;
+    }
+    .cardGif{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1415px) {
+    header section{
+        margin-left: 65%;
+    }
+    .innerDivs{
+        margin-left: 0;
+        margin-right: 50px;
+        width: 550px;
+    }
+    .infTwo aside{
+        width: 500px;
+    }
+    .infFive{
+        height: 700px;
+    }
+}
+@media screen and (max-width: 1333px) {
+    header section{
+        margin-left: 60%;
+    }
+    .innerDivs{
+        margin-left: 0;
+        margin-right: 50px;
+        width: 550px;
+    }
+    .infTwo aside{
+        width: 500px;
+    }
+    .imgPeople img{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1230px) {
+    header section{
+        margin-left: 60%;
+    }
+    .innerDivs{
+        margin-left: 0;
+        margin-right: 50px;
+        width: 500px;
+    }
+    .infTwo aside{
+        width: 450px;
+    }
+    .imgPeople img{
+        width: 300px;
+    }
+    .infFive{
+        height: 500px;
+    }
+    .infFive h1{
+        font-size: 30px;
+        margin-right: 50%;
+        padding-top: 50px;
+    }
+    .btnn{
+        margin-left: 35%;
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 1170px) {
+    header section{
+        margin-left: 50%;
+    }
+    header{
+        height: 600px;
+    }
+    .innerDivs{
+        margin-right: 5%;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .infTwo aside{
+        width: 100%;
+    }
+    .imgPeople{
+        margin-right: 150px;
+        margin-top: 100px;
+    }
+    .imgPeople img{
+        width: 300px;
+        margin-right: 0;
+    }
+    .infTwo{
+        display: block;
+    }
+    .infTree{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+
+    }
+    .infTree article{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .infOne{
+        display: block;
+    }
+    .infOne .innerDiv{
+        margin-right: 5%;
+    }
+    .infOne aside{
+        width: 100%;
+        right: 60px;
+    }
+    .infOne img{
+        margin-bottom: 100px;
+    }
+    .infFour{
+        display: block;
+    }
+    .infFour section{
+        margin-right: 5%;
+        width: 90%;
+    }
+    .infFour img{
+        width: 600px;
+        margin-left: 25%;
+    }
+    .cardGif{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 930px) {
+    header section{
+        margin-left: 40%;
+        padding-top: 50px;
+    }
+    header{
+        height: 500px;
+    }
+
+}
+@media screen and (max-width: 780px) {
+    header section{
+        margin-left: 5%;
+        padding-top: 40px;
+        font-size: 20px;
+    }
+    header{
+        height: 400px;
+    }
+    .infFour img{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 620px) {
+    header section{
+        margin-left: 2%;
+        padding-top: 50px;
+        font-size: 15px;
+    }
+    header{
+        height: 300px;
+    }
+    header h1{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .innerDivs{
+        margin-right: 5%;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .infTwo aside{
+        width: 100%;
+    }
+    .imgPeople{
+        margin-right: 100px;
+        margin-top: 100px;
+    }
+    .imgPeople img{
+        width: 200px;
+        margin-right: 0;
+    }
+    .infTwo{
+        display: block;
+    }
+    .infTree{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+
+    }
+    .infTree article{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .infOne{
+        display: block;
+    }
+    .infOne .innerDiv{
+        margin-right: 5%;
+    }
+    .infOne aside{
+        width: 100%;
+        right: 60px;
+    }
+    .infOne img{
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 450px) {
+    header section{
+        padding-top: 90px;
+        font-size: 12px;
+    }
+    header{
+        height: 300px;
+    }
+    header h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .innerDivs{
+        margin-right: 5%;
+        width: 90%;
+        margin-left: 10px;
+    }
+    .infTwo aside{
+        width: 100%;
+    }
+    .imgPeople{
+        margin-right: 100px;
+        margin-top: 50px;
+        margin-left: 100px;
+        display: block;
+    }
+    .imgPeople img{
+        width: 200px;
+        margin-right: 0;
+    }
+    .infTwo{
+        display: block;
+    }
+    .infTree{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+
+    }
+    .infTree article{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .infOne{
+        display: block;
+    }
+    .infOne .innerDiv{
+        margin-right: 5%;
+    }
+    .infOne aside{
+        width: 100%;
+        right: 60px;
+    }
+    .infOne img{
+        margin-bottom: 100px;
+        width: 400px;
+    }
+    .infFour img{
+        margin-left: 0;
+    }
+    .infFive{
+        height: 400px;
+        background-position: center;
+    }
+    .infFive h1{
+        padding-top: 10px;
+        margin-right: 200px;
+    }
+    .btnn{
+        margin-left: 25%;
+    }
+    .titleProd{
+        margin-left: 30px;
+    }
+}
