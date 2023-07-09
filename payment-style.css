@@ -1,0 +1,322 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    font-family: Roboto, sans-serif;
+}
+.fixed-menu-icon span {
+    transition: transform 0.3s ease;
+}
+.menu input{
+    display: none;
+}
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+.menu-items {
+    list-style-type: none;
+    padding: 20px;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: none;
+    width: 200px;
+    height: 100vh;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+.menu-items li {
+    margin-bottom: 50px;
+}
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 800;
+}
+.menu-items a {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #8039d9;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #00ffc4;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+.menu-items a:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: lightblue;
+    z-index: -1;
+}
+.menu-items a:hover, button:focus {
+    color: white;
+}
+.menu-items a:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    background-color: #f7f7f7;
+    margin-top: 100px;
+}
+footer img{
+    width: 50px;
+}
+#productImage{
+    margin-left: 5%;
+}
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+section{
+    margin-left: 10%;
+    font-size: 20px;
+    font-weight: 700;
+}
+#description{
+    width: 500px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    bottom: 30px;
+    right: 30px;
+}
+.hinter{
+    background-color: #8039d9;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    margin-left: 10%;
+}
+aside{
+    margin-top: 100px;
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+}
+input{
+    padding: 10px;
+    width: 200px;
+}
+.buttons {
+    margin-left: 10%;
+    margin-top: 170px;
+}
+.buttons button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 20px;
+    color: #568fa6;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+.buttons button:before, .buttons button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+.buttons button:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+.buttons button:after {
+    left: 0;
+    bottom: 0;
+}
+.buttons button span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+.buttons button span:before, .buttons button span:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+.buttons button span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+.buttons button span:after {
+    left: 0;
+    bottom: 0;
+}
+.buttons button p {
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.buttons button p:before, .buttons button p:after {
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    z-index: 1;
+    left: 0;
+}
+.buttons button p:before {
+    content: attr(data-title);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buttons button p:after {
+    content: attr(data-text);
+    top: 150%;
+    color: #44d8a4;
+}
+.buttons button:hover:before, .buttons button:hover:after {
+    width: 100%;
+}
+.buttons button:hover span {
+    z-index: 1;
+}
+.buttons button:hover span:before, .buttons button:hover span:after {
+    height: 100%;
+}
+.buttons button:hover p:before {
+    top: -50%;
+    transform: rotate(5deg);
+}
+.buttons button:hover p:after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.buttons button.start {
+    background-color: #44d8a4;
+    box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+.buttons button.start p:before {
+    top: -50%;
+    transform: rotate(5deg);
+}
+.buttons button.start p:after {
+    color: white;
+    transition: all 0s ease;
+    content: attr(data-start);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: start 0.3s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes start {
+    from {
+        top: -50%;
+    }
+}
+.buttons button.start:hover:before, .buttons button.start:hover:after {
+    display: none;
+}
+.buttons button.start:hover span {
+    display: none;
+}
+.buttons button:active {
+    outline: none;
+    border: none;
+}
+.buttons button:focus {
+    outline: 0;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.error {
+    animation: shake 0.5s;
+    border-color: red;
+}
+@media screen and (max-width: 1500px) {
+    #description{
+        width: 90%;
+    }
+    .hinter{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 710px) {
+    img{
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 5%;
+    }
+}
